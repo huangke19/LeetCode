@@ -17,12 +17,27 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
 class Solution:
-    def merge(self, nums1, m, nums2, n):
+    def isUgly(self, num):
         """
-        :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: void Do not return anything, modify nums1 in-place instead.
+        :type num: int
+        :rtype: bool
         """
+        if num == 0:
+            return False
+        
+        while num % 2 == 0:
+            num = num // 2
+        while num % 3 == 0:
+            num = num // 3
+        while num % 5 == 0:
+            num = num // 5
+        
+        return num == 1
+
+
+sol = Solution()
+print(sol.isUgly(6))
+print(sol.isUgly(8))

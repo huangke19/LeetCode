@@ -17,12 +17,20 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
 class Solution:
-    def merge(self, nums1, m, nums2, n):
+    def strStr(self, haystack, needle):
         """
-        :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: void Do not return anything, modify nums1 in-place instead.
+        :type haystack: str
+        :type needle: str
+        :rtype: int
         """
+        import re
+        s = re.search(needle, haystack)
+        return s.start() if s else -1
+
+
+sol = Solution()
+assert sol.strStr("hello", "ll") == 2
+assert sol.strStr("aaaaa", "bba") == -1

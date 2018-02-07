@@ -17,6 +17,8 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
 class Solution:
     def merge(self, nums1, m, nums2, n):
         """
@@ -26,3 +28,23 @@ class Solution:
         :type n: int
         :rtype: void Do not return anything, modify nums1 in-place instead.
         """
+        r = []
+        while m and n:
+            if nums1[0] <= nums2[0]:
+                r.append(nums1.pop(0))
+                m -= 1
+            else:
+                r.append(nums2.pop(0))
+                n -= 1
+        if m:
+            r.extend(nums1)
+        if n:
+            r.extend(nums2)
+        nums1 = r
+        print(nums1)
+
+
+sol = Solution()
+sol.merge([1, 3, 5], 3, [2, 4, 6, 8], 4)
+sol.merge([1], 1, [], 0)
+sol.merge([0], 0, [1], 1)

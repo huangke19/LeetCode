@@ -17,12 +17,25 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
 class Solution:
-    def merge(self, nums1, m, nums2, n):
+    def dominantIndex(self, nums):
         """
         :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: void Do not return anything, modify nums1 in-place instead.
+        :rtype: int
         """
+        if len(nums) == 1:
+            return 0
+        nums1 = sorted(nums)[::-1]
+        if nums1[0] >= 2 * nums1[1]:
+            return nums.index(nums1[0])
+        else:
+            return -1
+
+
+sol = Solution()
+print(sol.dominantIndex([3, 2, 6, 1, 0]))
+print(sol.dominantIndex([3, 2, 6, 1, 0]))
+print(sol.dominantIndex([3, 2, 6, 19, 0]))
+print(sol.dominantIndex([1]))

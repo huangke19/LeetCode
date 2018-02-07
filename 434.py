@@ -18,11 +18,14 @@
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
 class Solution:
-    def merge(self, nums1, m, nums2, n):
+    def countSegments(self, s):
         """
-        :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: void Do not return anything, modify nums1 in-place instead.
+        :type s: str
+        :rtype: int
         """
+        print(len(s.split()))
+        
+
+sol = Solution()
+sol.countSegments("Hello, my name is John")
+sol.countSegments("love live! mu'sic forever")

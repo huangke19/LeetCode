@@ -1,0 +1,45 @@
+[INFO  - 2018-02-04T10:19:35.502Z] GhostDriver - Main - running on port 64281
+[INFO  - 2018-02-04T10:19:36.449Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-02-04T10:19:36.449Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.customHeaders:  - {}
+[INFO  - 2018-02-04T10:19:36.449Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-02-04T10:19:36.449Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: e6a8ebc0-0994-11e8-8ac1-811444e2cf25
+[ERROR - 2018-02-04T10:19:40.101Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.onError - msg: Error: fetch is not found globally and no fetcher passed, to fix pass a fetch for
+      your environment like https://www.npmjs.com/package/unfetch.
+
+      For example:
+        import fetch from 'unfetch';
+        import { createHttpLink } from 'apollo-link-http';
+
+        const link = createHttpLink({ uri: '/graphql', fetch: fetch });
+      
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-02-04T10:19:40.101Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.onError - stack:
+  d (https://leetcode.com/static/webpack_bundles/common/js/vendor.01269e51.js:1)
+  h (https://leetcode.com/static/webpack_bundles/common/js/vendor.01269e51.js:1)
+  t (https://leetcode.com/static/webpack_bundles/common/js/vendor.01269e51.js:1)
+  zAHE (https://leetcode.com/static/webpack_bundles/common/js/libraries.2a9b90e3.js:1)
+  n (https://leetcode.com/static/webpack_bundles/manifest.a7ddf167.js:1)
+  1nrO (https://leetcode.com/static/webpack_bundles/common/js/libraries.2a9b90e3.js:1)
+  n (https://leetcode.com/static/webpack_bundles/manifest.a7ddf167.js:1)
+  KTZ5 (https://leetcode.com/static/webpack_bundles/common/js/libraries.2a9b90e3.js:1)
+  n (https://leetcode.com/static/webpack_bundles/manifest.a7ddf167.js:1)
+  k2X5 (https://leetcode.com/static/webpack_bundles/common/js/libraries.2a9b90e3.js:1)
+  n (https://leetcode.com/static/webpack_bundles/manifest.a7ddf167.js:1)
+  webpackJsonp (https://leetcode.com/static/webpack_bundles/manifest.a7ddf167.js:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-02-04T10:19:40.177Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.onError - msg: TypeError: undefined is not an object (evaluating 'w.client.query')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-02-04T10:19:40.178Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.onError - stack:
+  d (https://leetcode.com/static/webpack_bundles/common/js/vendor.01269e51.js:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-02-04T10:19:40.180Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.onError - msg: Unhandled promise rejection TypeError: undefined is not an object (evaluating 'w.client.query')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-02-04T10:19:40.180Z] Session [e6a8ebc0-0994-11e8-8ac1-811444e2cf25] - page.onError - stack:
+  (anonymous function) (https://leetcode.com/static/webpack_bundles/common/js/vendor.01269e51.js:1)
+
+  phantomjs://platform/console++.js:263 in error

@@ -17,12 +17,23 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
 class Solution:
-    def merge(self, nums1, m, nums2, n):
+    def repeatedStringMatch(self, A, B):
         """
-        :type nums1: List[int]
-        :type m: int
-        :type nums2: List[int]
-        :type n: int
-        :rtype: void Do not return anything, modify nums1 in-place instead.
+        :type A: str
+        :type B: str
+        :rtype: int
         """
+        import re
+        n = len(B) // len(A) + 2
+        for i in range(1, n + 1):
+            newA = A * i
+            if re.search(B, newA):
+                return i
+        return -1
+
+
+sol = Solution()
+print(sol.repeatedStringMatch("abcd", "cdabcdab"))
