@@ -17,3 +17,22 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
+class Solution(object):
+    def fizzBuzz(self, n):
+        """
+        :type n: int
+        :rtype: List[str]
+        """
+        a = []
+        for x in range(1, n + 1):
+            if x % 3 == 0 and x % 5 != 0:
+                a.append('Fizz')
+            elif x % 3 != 0 and x % 5 == 0:
+                a.append('Buzz')
+            elif x % 15 == 0:
+                a.append('FizzBuzz')
+            else:
+                a.append(str(x))
+        return a

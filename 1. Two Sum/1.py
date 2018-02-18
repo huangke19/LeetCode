@@ -17,3 +17,16 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        for x in range(len(nums)):
+            for y in range(x + 1, len(nums)):
+                if nums[x] + nums[y] == target:
+                    return x, y

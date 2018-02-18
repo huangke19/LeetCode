@@ -17,3 +17,13 @@
     4. 检查伪代码
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
+
+
+class Solution(object):
+    def missingNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        n = len(nums)
+        return n * (n + 1) / 2 - sum(nums)
