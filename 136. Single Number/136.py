@@ -29,3 +29,19 @@ class Solution(object):
         for x in nums:
             r = r ^ x
         return r
+
+
+class Solution1:
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        s = set()
+        for i in nums:
+            if i not in s:
+                s.add(i)
+            else:
+                s.remove(i)
+        res = s.pop()
+        return res
