@@ -7,6 +7,6 @@
 
 > 使用set()进行检查，注意deepcopy，不能直接在list上修改删除排序数组中的重复项
 
-122. Best Time to Buy and Sell Stock II
 
-> 贪婪算法
+> 贪婪算法 
+
