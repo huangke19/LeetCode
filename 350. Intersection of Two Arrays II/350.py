@@ -18,19 +18,30 @@
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
 
-
 class Solution:
+
     def intersect(self, nums1, nums2):
         """
         :type nums1: List[int]
         :type nums2: List[int]
         :rtype: List[int]
         """
-        from collections import Counter
-        c1 = Counter(nums1)
-        c2 = Counter(nums2)
-        return list((c1 & c2))
-
+        # from collections import Counter
+        # c1 = Counter(nums1)
+        # c2 = Counter(nums2)
+        # return list((c1 & c2))
+        l1 = len(nums1)
+        l2 = len(nums2)
+        min_nums = nums1 if l1 <= l2 else nums2
+        max_nums = nums2 if l1 <= l2 else nums1
+        # s2 = set(max_nums)
+        res = []
+        for i in min_nums:
+            if i in max_nums:
+                res.append(i)
+                max_nums.remove(i)
+        return res
 
 sol = Solution()
-assert sol.intersect([1, 2, 2, 1], [2, 2]) == [2]
+# assert sol.intersect([1, 2, 2, 1], [2, 2]) == [2, 2]
+print(sol.intersect([1, 2, 2, 1], [2, 2]))
