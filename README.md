@@ -1,8 +1,8 @@
 # Keep thinking, keep alive
-Until 2018-08-10 18:13:58, I have solved **0** / **831** problems while **139** are still locked.
+Until 2018-08-10 18:15:42, I have solved **0** / **831** problems while **139** are still locked.
 
 Completion statistic: 
-1. Python: 0
+ Python: 0
 
 Note: :lock: means you need to buy a book from LeetCode
 
