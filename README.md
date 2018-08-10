@@ -17,3 +17,6 @@
 
   > 排序 + 遍历 + 哈希
 
+- 36 [有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)
+
+  > 通过循环分组
