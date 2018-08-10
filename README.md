@@ -20,3 +20,7 @@
 - 36 [有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)
 
   > 通过循环分组
+
+- 647 [回文子串](https://leetcode-cn.com/problems/palindromic-substrings)
+
+  > 中心扫描法
