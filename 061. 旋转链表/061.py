@@ -31,4 +31,4 @@ class Solution:
         for i in newt:
             tmp.next = ListNode(i)
             tmp = tmp.next
-        # return res.next
+        return res.next
