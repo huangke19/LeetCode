@@ -31,8 +31,8 @@ class Solution:
 
         for i in tmpt:
             t[i], t[i + 1] = t[i + 1], t[i]
-        res = tmp = ListNode(1)
 
+        res = tmp = ListNode(1)
         for i in t:
             tmp.next = ListNode(i)
             tmp = tmp.next
