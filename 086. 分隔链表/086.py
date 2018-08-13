@@ -22,7 +22,6 @@ class Solution:
 
         st = []
         lt = []
-        s = set()
         for i in t:
             if i < x:
                 st.append(i)
