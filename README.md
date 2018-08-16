@@ -1,1 +1,1 @@
-sharpen skills
+sharpen my skill
