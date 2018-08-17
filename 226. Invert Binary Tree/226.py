@@ -18,7 +18,6 @@
 10. 在伪代码中试验一些想法，留下最好的想法
 '''
 
-
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -27,6 +26,7 @@
 #         self.right = None
 
 class Solution(object):
+
     def invertTree(self, root):
         """
         :type root: TreeNode
