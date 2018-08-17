@@ -7,7 +7,7 @@ class Solution(object):
         return str.lower()
 
 
-class Solution(object):
+class Solution1(object):
     def toLowerCase(self, str):
         """
         :type str: str
