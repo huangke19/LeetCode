@@ -5,7 +5,7 @@ pwd = os.getcwd()
 dirlist = os.listdir(pwd)
 dirlist.sort()
 
-# 取未个性名字的文件夹
+# 取未修改名字的文件夹
 newdirlist = []
 [newdirlist.append(dir) for dir in dirlist if re.match('\d{3}', dir) and len(dir) > 3]
 
