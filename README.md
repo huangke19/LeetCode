@@ -1,1 +1,1 @@
-sharpen my skill
+LeetCode代码记录，锻炼编码能力
