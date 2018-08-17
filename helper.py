@@ -16,7 +16,7 @@ class Config:
     １．　本地仓库的的路径
     ２．　github中的仓库leetcode解法的路径
     """
-    local_path = '/Users/huangke/PycharmProjects/LeetCode'
+    local_path = '/Users/huangke/PycharmProjects'
     # solution of leetcode
     github_leetcode_url = 'https://github.com/huangke19/LeetCode'
     # solution of pat,　暂时还没用上
@@ -95,20 +95,21 @@ class TableInform:
 
     # create problems folders
     def __create_folder(self, oj_name):
-        oj_algorithms = Config.local_path + '/' + oj_name
-        if os.path.exists(oj_algorithms):
+        LeetCode = Config.local_path + '/' + oj_name
+        if os.path.exists(LeetCode):
             print(oj_name, ' algorithms is already exits')
         else:
             print('creating {} algorithms....'.format(oj_name))
-            os.mkdir(oj_algorithms)
+            os.mkdir(LeetCode)
         for item in self.table_item.values():
-            question_folder_name = oj_algorithms + '/' + item.id_ + '. ' + item.title
+            question_folder_name = LeetCode + '/' + item.id_ + '. ' + item.title
             if os.name != 'posix':
                 # 如果不是linux，那么就要吧后面的问号去掉
                 question_folder_name = question_folder_name[:-1]
-            if not os.path.exists(question_folder_name):
-                print(question_folder_name + 'is not exits, create it now....')
-                os.mkdir(question_folder_name)
+            # if not os.path.exists(question_folder_name):
+            #     print(question_folder_name + 'is not exits, create it now....')
+                # os.mkdir(question_folder_name)
+                pass
 
     def update_table(self, oj):
         # the complete inform should be update
@@ -118,14 +119,15 @@ class TableInform:
         complete_info.total = len(self.table)
         complete_info.lock = self.locked
         self.__create_folder(oj)
-        oj_algorithms = Config.local_path + '/' + oj
+        LeetCode = Config.local_path + '/' + oj
+        # print(LeetCode)
         # 查看os.walk看具体返回的是什么东西
-        for _, folders, _ in os.walk(oj_algorithms):
+        for _, folders, _ in os.walk(LeetCode):
             # print(folders)
             for folder in folders:
                 # print(folder)
-                # print(os.path.join(oj_algorithms, folder))
-                for _, _, files in os.walk(os.path.join(oj_algorithms, folder)):
+                # print(os.path.join(LeetCode, folder))
+                for _, _, files in os.walk(os.path.join(LeetCode, folder)):
                     # print(files)
                     if len(files) != 0:
                         complete_info.complete_num += 1
@@ -194,7 +196,7 @@ class Readme:
                    'Until {}, I have solved **{}** / **{}** problems ' \
                    'while **{}** are still locked.' \
                    '\n\nCompletion statistic: ' \
-                   '\n1. Python: {python}' \
+                   '\n Python: {python}' \
                    '\n\nNote: :lock: means you need to buy a book from LeetCode\n'.format(
                     self.time, self.solved, self.total, self.locked, **self.others)
 
@@ -237,7 +239,7 @@ class Readme:
 
 def main():
     table = TableInform()
-    table.update_table('leetcode-algorithms')
+    table.update_table('LeetCode')
 
 
 if __name__ == '__main__':
