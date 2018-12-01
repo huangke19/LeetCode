@@ -47,8 +47,11 @@ class Solution2:
         :type l2: ListNode
         :rtype: ListNode
         """
-        # 将两个链表的数取出来，转化为数字形式
-        # 将链表转化为列表
+        #       将两个链表的值取出来，转化为数字
+        #       将得到的数字进行计算
+        #       计算结果恢复成链表
+
+        #       将链表转化为列表
         list1, list2 = [], []
         while l1:
             list1.append(l1.val)
@@ -56,40 +59,31 @@ class Solution2:
         while l2:
             list2.append(l2.val)
             l2 = l2.next
-
-        # 列表翻转
+        #       列表翻转
         list1.reverse()
         list2.reverse()
-
-        # 将列表转化为字符串
+        #       将列表转化为字符串
         list1 = [str(i) for i in list1]
         list2 = [str(i) for i in list2]
         str1 = ''.join(list1)
         str2 = ''.join(list2)
-
-        # 将字符串转化为数字
+        #       将字符串转化为数字
         num1, num2 = int(str1), int(str2)
-
-        # 将得到的两个数进行计算
+        #       将得到的两个数进行计算
         num3 = num1 + num2
-
-        # 将结果反转并恢复成链表的形式
-
-        # 结果恢复成可迭代的字符并反转
+        #       将结果恢复成链表的形式
+        #       结果恢复成可迭代的字符
         str3 = str(num3)[::-1]
-
-        # 生成头部节点
+        #       生成头部节点
         head = curnode = ListNode(0)
-
-        # 遍历字符串
+        #       遍历字符串
         for i in str3:
-            # 每个cur转为数字后单独成一个结点
+            #       每个cur转为数字后单独成一个结点
             node = ListNode(int(i))
-            # 将各个结点串起来
+            #       将各个结点串起来
             curnode.next = node
             curnode = curnode.next
-
-        # 去掉头部返回
+        #       去掉头部返回
         return head.next
 
 
