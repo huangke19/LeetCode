@@ -19,7 +19,7 @@
 '''
 
 
-class Solution:
+class Solution1:
     def findMedianSortedArrays(self, nums1, nums2):
         """
         :type nums1: List[int]
@@ -34,6 +34,29 @@ class Solution:
         else:
             res = (nums1[n // 2]) / 1.0
         return res
+
+class Solution2:
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        # 合并两个数组
+        nums3 = sorted(nums1 + nums2)
+        # 新数组排序
+        n = len(nums3)
+        # 判断如果为偶数，取中间两位
+        if n % 2 == 0:
+            index1, index2 = int(n / 2 - 1), int(n / 2)
+            mid_num = (nums3[index1] + nums3[index2]) / 2
+        # 如果为奇数，取中间一位
+        else:
+            index = int((n - 1) / 2)
+            mid_num = nums3[index]
+        # 取中位数
+        print(mid_num)
+        return mid_num
 
 
 nums1 = [1]
