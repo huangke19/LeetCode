@@ -30,7 +30,6 @@ class Solution2:
         :type s: str
         :rtype: str
         """
-
         # 将奇偶数长度的s转换成同一种情况
         s = ''.join(['#', '#'.join(s), '#'])
 
@@ -50,6 +49,8 @@ class Solution2:
             rng = min(left_range, right_range)
             # 判断当前字符串是否为回文，如果是，继续扩展
             for k in range(rng + 1):
+
+                # 此处优化，不计算比当前短的字符串以节省时间
                 if 2 * k + 1 < n:
                     continue
                 if self.is_pal(s[i - k:i + k + 1]):
